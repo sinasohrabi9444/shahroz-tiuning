@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // اتصال به MongoDB
-mongoose.connect('mongodb://localhost:27017/carhub', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
